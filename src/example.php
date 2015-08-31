@@ -41,7 +41,7 @@ class example
         $curl = curl_init();
         curl_setopt_array($curl, $curlOptions);
 
-        $result   = curl_exec($curl);
+        $result = curl_exec($curl);
         // $httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
         $curlError = curl_error($curl);
