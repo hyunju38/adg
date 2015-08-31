@@ -16,11 +16,21 @@ class example
         $this->objPHPExcel->setActiveSheetIndex(0);
     }
 
+    /**
+     * plus
+     * @param  [int] $a [1]
+     * @param  [int] $b [2]
+     * @return [int] sum
+     */
     public function plus($a, $b)
     {
         return $a + $b;
     }
 
+    /**
+     * curl
+     * @return [string] result
+     */
     public static function curl()
     {
         $curlOptions = array(
@@ -32,7 +42,7 @@ class example
         curl_setopt_array($curl, $curlOptions);
 
         $result   = curl_exec($curl);
-        $httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+        // $httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
         $curlError = curl_error($curl);
         if ($curlError) {
