@@ -8,14 +8,16 @@
         "phpoffice/phpexcel": "^1.8"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.7",
+        "phpunit/phpunit": "^4.8",
+        "theseer/phpdox": "0.8.1.1",
         "squizlabs/php_codesniffer": "^2.3",
         "phpmd/phpmd": "^2.2",
         "phploc/phploc": "^2.1",
         "sebastian/phpcpd": "^2.0",
         "phpdocumentor/phpdocumentor": "^2.8",
         "mayflower/php-codebrowser": "^1.1",
-        "phing/phing": "^2.11",
+        "phing/phing": "^2.12",
+        "fzaninotto/faker": "^1.5",
         "php-mock/php-mock": "^0.8.0"
     },
     "autoload": {
