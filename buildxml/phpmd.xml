@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<ruleset name="yellotravel Mess Detector"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0
+                     http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="
+                     http://pmd.sf.net/ruleset_xml_schema.xsd">
+    <description>
+        yt Mess Detector
+    </description>
+
+    <!-- A boolean flag argument is a reliable indicator for a violation of the Single Responsibility Principle -->
+    <!-- <rule ref="rulesets/cleancode.xml/BooleanArgumentFlag" /> -->
+    <!-- An if expression with an else branch is never necessary. -->
+    <!-- <rule ref="rulesets/cleancode.xml/ElseExpression" /> -->
+    <!-- Static acccess causes inexchangable dependencies to other classes and leads to hard to test code. -->
+    <!-- <rule ref="rulesets/cleancode.xml/StaticAccess" /> -->
+
+    <!-- Import the entire cyclomatic complexity rule -->
+    <!-- reportLevel:10 -->
+    <rule ref="rulesets/codesize.xml/CyclomaticComplexity">
+        <properties>
+            <property name="showClassesComplexity" value="false" />
+            <property name="showMethodsComplexity" value="false" />
+        </properties>
+    </rule>
+    <!-- The NPath complexity of a method is the number of acyclic execution paths through that method. -->
+    <!-- minimum:200 -->
+    <rule ref="rulesets/codesize.xml/NPathComplexity" />
+    <!-- Violations of this rule usually indicate that the method is doing too much. -->
+    <!-- minimum:100 -->
+    <!-- ignore-whitespace:false -->
+    <rule ref="rulesets/codesize.xml/ExcessiveMethodLength" />
+    <!-- Long Class files are indications that the class may be trying to do too much. -->
+    <!-- minimum:1000 -->
+    <!-- ignore-whitespace:false -->
+    <rule ref="rulesets/codesize.xml/ExcessiveClassLength" />
+    <!-- Long parameter lists can indicate that a new object should be created to wrap the numerous parameters. -->
+    <!-- minimum:10 -->
+    <rule ref="rulesets/codesize.xml/ExcessiveParameterList" />
+    <!-- A large number of public methods and attributes declared in a class can indicate the class may need to be broken up as increased effort will be required to thoroughly test it. -->
+    <!-- minimum:45 -->
+    <rule ref="rulesets/codesize.xml/ExcessivePublicCount" />
+    <!-- Classes that have too many fields could be redesigned to have fewer fields, possibly through some nested object grouping of some of the information. -->
+    <!-- maxfields:15 -->
+    <rule ref="rulesets/codesize.xml/TooManyFields" />
+    <!-- A class with too many methods is probably a good suspect for refactoring, in order to reduce its complexity and find a way to have more fine grained objects. -->
+    <!-- maxmethods:10 -->
+    <rule ref="rulesets/codesize.xml/TooManyMethods" />
+    <!-- The Weighted Method Count (WMC) of a class is a good indicator of how much time and effort is required to modify and maintain this class. -->
+    <!-- maximum:50 -->
+    <rule ref="rulesets/codesize.xml/ExcessiveClassComplexity" />
+
+    <!-- Accessing a super-global variable directly is considered a bad practice. -->
+    <rule ref="rulesets/controversial.xml/Superglobals" />
+
+    <!-- The Code Size Ruleset contains a collection of rules that find software design related problems. -->
+    <!-- An exit-expression within regular code is untestable and therefore it should be avoided. -->
+    <!-- /ExitExpression -->
+    <!-- An eval-expression is untestable, a security risk and bad practice. -->
+    <!-- /EvalExpression -->
+    <!-- Goto makes code harder to read and it is nearly impossible to understand the control flow of an application that uses this language construct. -->
+    <!-- /GotoStatement -->
+    <!-- A class with an excessive number of children is an indicator for an unbalanced class hierarchy. -->
+    <!-- /NumberOfChildren -->
+    <!-- minimum:15 -->
+    <!-- A class with many parents is an indicator for an unbalanced and wrong class hierarchy. -->
+    <!-- /DepthOfInheritance -->
+    <!-- minimum:6 -->
+    <!-- A class with too many dependencies has negative impacts on several quality aspects of a class. -->
+    <!-- /CouplingBetweenObjects -->
+    <!-- minimum:13 -->
+    <rule ref="rulesets/design.xml" />
+
+    <rule ref="rulesets/naming.xml/ShortMethodName">
+        <properties>
+            <property name="minimum" value="3" />
+        </properties>
+    </rule>
+    <rule ref="rulesets/naming.xml/ConstructorWithNameAsEnclosingClass" />
+    <rule ref="rulesets/naming.xml/ConstantNamingConventions" />
+    <rule ref="rulesets/naming.xml/BooleanGetMethodName" />
+
+    <!-- Import the entire unused code rule set -->
+    <rule ref="rulesets/unusedcode.xml" />
+</ruleset>
