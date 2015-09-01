@@ -26,6 +26,6 @@ class exampleTest extends \PHPUnit_Framework_TestCase
     public function testMock()
     {
         $example = new example();
-        $this->assertEquals('OK1', $example->curl());
+        $this->assertEquals('OK', $example->curl());
     }
 }
