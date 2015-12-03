@@ -1,6 +1,6 @@
 {
-    "name": "php-boilerplate",
-    "description": "boilerplate",
+    "name": "yellotravel/yt-asl",
+    "description": "It's airports search library.",
     "version": "0.0.1",
     "repositories": [
     ],
@@ -20,12 +20,20 @@
         "fzaninotto/faker": "^1.5",
         "php-mock/php-mock": "^0.8.0"
     },
+    "authors": [
+        {
+            "name": "hyunju38",
+            "email": "hj.choi@yellotravel.com"
+        }
+    ],
     "autoload": {
         "psr-4": {
-            "boilerplate\\": "src/"
+            "yellotravel\\": "src/"
         }
     },
-    "include-path": [
-        "src/"
-    ]
+    "autoload-dev": {
+        "psr-4": {
+            "yellotravel\\tests\\": "tests/"
+        }
+    }
 }
