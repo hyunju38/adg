@@ -1,11 +1,12 @@
 {
-    "name": "yellotravel/yt-asl",
-    "description": "It's airports search library.",
+    "name": "yellotravel/adg",
+    "description": "It's airports data generator.",
     "version": "0.0.1",
     "repositories": [
     ],
     "require": {
-        "phpoffice/phpexcel": "^1.8"
+        "phpoffice/phpexcel": "^1.8",
+        "php-school/cli-menu": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",
